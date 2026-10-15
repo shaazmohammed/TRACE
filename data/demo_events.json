@@ -1,0 +1,140 @@
+[
+  {
+    "external_id": "evt-001",
+    "timestamp": "2026-03-10T08:50:00Z",
+    "source": "Authentication",
+    "event_type": "LOGIN_FAILED",
+    "username": "asmith-sample",
+    "source_ip": "192.0.2.10",
+    "device_id": null,
+    "severity": "Low",
+    "description": "Single failed login for asmith-sample (likely a typo).",
+    "raw_data": {"reason": "bad_password", "attempt": 1, "ip_previously_seen_for_user": true}
+  },
+  {
+    "external_id": "evt-002",
+    "timestamp": "2026-03-10T09:00:05Z",
+    "source": "Authentication",
+    "event_type": "LOGIN_FAILED",
+    "username": "jdoe-sample",
+    "source_ip": "198.51.100.23",
+    "device_id": null,
+    "severity": "Medium",
+    "description": "Failed login for jdoe-sample (attempt 1).",
+    "raw_data": {"reason": "bad_password", "attempt": 1}
+  },
+  {
+    "external_id": "evt-003",
+    "timestamp": "2026-03-10T09:01:10Z",
+    "source": "Authentication",
+    "event_type": "LOGIN_FAILED",
+    "username": "jdoe-sample",
+    "source_ip": "198.51.100.23",
+    "device_id": null,
+    "severity": "Medium",
+    "description": "Failed login for jdoe-sample (attempt 2).",
+    "raw_data": {"reason": "bad_password", "attempt": 2}
+  },
+  {
+    "external_id": "evt-004",
+    "timestamp": "2026-03-10T09:02:20Z",
+    "source": "Authentication",
+    "event_type": "LOGIN_FAILED",
+    "username": "jdoe-sample",
+    "source_ip": "198.51.100.23",
+    "device_id": null,
+    "severity": "Medium",
+    "description": "Failed login for jdoe-sample (attempt 3).",
+    "raw_data": {"reason": "bad_password", "attempt": 3}
+  },
+  {
+    "external_id": "evt-005",
+    "timestamp": "2026-03-10T09:03:30Z",
+    "source": "Authentication",
+    "event_type": "LOGIN_FAILED",
+    "username": "jdoe-sample",
+    "source_ip": "198.51.100.23",
+    "device_id": null,
+    "severity": "Medium",
+    "description": "Failed login for jdoe-sample (attempt 4).",
+    "raw_data": {"reason": "bad_password", "attempt": 4}
+  },
+  {
+    "external_id": "evt-006",
+    "timestamp": "2026-03-10T09:04:00Z",
+    "source": "Authentication",
+    "event_type": "LOGIN_SUCCESS",
+    "username": "asmith-sample",
+    "source_ip": "192.0.2.10",
+    "device_id": "LAPTOP-SYNTH-022",
+    "severity": "Low",
+    "description": "Successful login for asmith-sample from a known IP.",
+    "raw_data": {"ip_previously_seen_for_user": true}
+  },
+  {
+    "external_id": "evt-007",
+    "timestamp": "2026-03-10T09:06:00Z",
+    "source": "Authentication",
+    "event_type": "LOGIN_SUCCESS",
+    "username": "jdoe-sample",
+    "source_ip": "203.0.113.77",
+    "device_id": "WS-SYNTH-014",
+    "severity": "High",
+    "description": "Successful login for jdoe-sample from an unfamiliar IP.",
+    "raw_data": {"ip_previously_seen_for_user": false}
+  },
+  {
+    "external_id": "evt-008",
+    "timestamp": "2026-03-10T09:11:00Z",
+    "source": "Endpoint",
+    "event_type": "SCRIPT_EXECUTION",
+    "username": "jdoe-sample",
+    "source_ip": null,
+    "device_id": "WS-SYNTH-014",
+    "severity": "High",
+    "description": "Unusual script interpreter launched with an encoded argument.",
+    "raw_data": {
+      "process_id": 4242,
+      "process_name": "script-host.exe",
+      "command_line": "script-host.exe -EncodedCommand <synthetic-placeholder>",
+      "parent_process": "office-app.exe",
+      "suspicious": true
+    }
+  },
+  {
+    "external_id": "evt-009",
+    "timestamp": "2026-03-10T09:12:00Z",
+    "source": "Network",
+    "event_type": "NETWORK_CONNECTION",
+    "username": null,
+    "source_ip": "10.20.0.22",
+    "device_id": "LAPTOP-SYNTH-022",
+    "severity": "Low",
+    "description": "Routine outbound HTTPS connection.",
+    "raw_data": {"process_id": 1180, "destination_ip": "192.0.2.55", "destination_port": 443}
+  },
+  {
+    "external_id": "evt-010",
+    "timestamp": "2026-03-10T09:13:30Z",
+    "source": "Network",
+    "event_type": "NETWORK_CONNECTION",
+    "username": null,
+    "source_ip": "10.20.0.14",
+    "device_id": "WS-SYNTH-014",
+    "severity": "High",
+    "description": "Outbound connection to an unfamiliar destination on a non-standard port.",
+    "raw_data": {"process_id": 4242, "destination_ip": "192.0.2.99", "destination_port": 8443, "bytes_out": 52000}
+  },
+  {
+    "external_id": "evt-011",
+    "timestamp": "2026-03-10T14:30:00Z",
+    "source": "Endpoint",
+    "event_type": "SCHEDULED_BACKUP",
+    "username": null,
+    "source_ip": null,
+    "device_id": "WS-SYNTH-014",
+    "severity": "Low",
+    "description": "Scheduled backup job completed on WS-SYNTH-014.",
+    "raw_data": {"job": "nightly-backup", "suspicious": false}
+  }
+]
